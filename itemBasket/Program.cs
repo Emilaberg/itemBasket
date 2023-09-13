@@ -20,7 +20,7 @@ void Main()
     {
         Console.WriteLine($"you have {recipe.Count()} item(s) in your basket");
 
-        foreach (var item in recipe)
+        foreach (string item in recipe)
         {
             Console.WriteLine(item);
         }
@@ -115,6 +115,7 @@ bool RemoveFruit()
     // Kollar om det man skrev in finns i recipe korgen, annars skriver den ut error meddelande, visar vad man skrev och kallar på removefruit igen.
     if (recipe.Contains(temp))
     {
+
         recipe.Remove(temp);
         return true;
     }
