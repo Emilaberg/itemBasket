@@ -50,11 +50,15 @@ void ValidatesAndRun(string input)
     else if (recipe.Contains(input)) //Finns frukten redan i recipe så tas det bort
     {
         Console.WriteLine("that ingredient has already been added!");
-        Console.WriteLine($"removing {input} from basket...");
-        Console.ReadKey(true);
+        Console.WriteLine($"reverting...");
+        for (int i = 2; i > 0; i--)
+        {
+            Console.WriteLine(i);
+            Thread.Sleep(250);
+        }
         // TO-DO 
-        // IMPLEMENT TIMER BEFORE REMOVING INPUT AND CALLING MAIN
-        //recipe.Remove(input);
+
+
         Main();
     }
 
